@@ -99,13 +99,14 @@
 
     int RQTree::query(std::vector<std::size_t> myVectorQuery)
     {
-        if (myVectorQuery.size() == 0 || myVectorQuery.size()-1>m_size)
+        std::size_t size = myVectorQuery.size(); 
+        if ( size == 0 || size-1>m_size)
             return -1;
 
         Node* i, *j = nullptr; 
         std::size_t k;
 
-        for (i = m_root, k = 1, j = i; i && k < myVectorQuery.size() ; i = (i)->m_nodes[myVectorQuery[k]-1], j = i, k++) { }
+        for (i = m_root, k = 1, j = i; i && k < size ; i = (i)->m_nodes[myVectorQuery[k]-1], j = i, k++) { }
 
         return j->m_numpoints;
     }
