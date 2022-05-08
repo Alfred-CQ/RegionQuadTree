@@ -4,12 +4,12 @@
 
 - En el ejemplo del archivo main, T son las divisiones que se realizan en este caso T = 3, el limite superior topLeft{100,100} y el limite inferior es botRight{0,0}
 
-![](https://github.com/Alfred-CQ/RegionQuadTree/img/Allpoints.png)
+![](https://github.com/Alfred-CQ/RegionQuadTree/blob/main/img/Allpoints.png)
 
 ### Formato de las regiones
 - Para rotular las regiones utilizamos enteros del 1 al 4 que se van enumerando recursivamente.
 
-![](https://github.com/Alfred-CQ/RegionQuadTree/img/regions.png)
+![](https://github.com/Alfred-CQ/RegionQuadTree/blob/main/img/regions.PNG)
 
 ### Consultas de ejemplo
 - Para obtener la región global, es simplemente consultar por el número 1, por la enumeración recursiva.
@@ -17,4 +17,4 @@
 ```c++
 std::vector<std::size_t> query = {1, 1, 1, 2};
 ```
-![](https://github.com/Alfred-CQ/RegionQuadTree/img/regions.png)
+![](https://github.com/Alfred-CQ/RegionQuadTree/blob/main/img/queries.png)
