@@ -25,14 +25,16 @@
             
             std::size_t m_region;
             std::size_t m_level;
-            std::size_t m_numpoints = 0;
+            std::size_t m_numpoints;
 
-
-            Node(std::size_t level, Point topLeft, Point botRight)
+            Node();
+            Node(std::size_t level, Point topLeft, Point botRight, std::size_t region)
             {
                 m_level = level;
+                m_region = region;
                 m_topLeft = topLeft;
                 m_botRight = botRight;
+                m_numpoints = 0;
                 m_nodes[0] = nullptr; m_nodes[1] = nullptr;
                 m_nodes[2] = nullptr; m_nodes[3] = nullptr;
             };
